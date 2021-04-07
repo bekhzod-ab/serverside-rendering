@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/header.ejs", {title: "Products"}) %>
+<body>
+    <%- include("./partials/nav.ejs")%>
+    <h3>Our laptops:</h3>
+    <ul>
+
+    <% laptops.forEach(el => {%>
+        
+            <li><%=el.name%></li>
+            <li>price: <%=el.price%> $</li>
+            <li><a href="">more</a></li>
+
+    <% });  %>   
+
+    </ul>    
+</body>
+</html>
+
+

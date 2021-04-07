@@ -1,0 +1,27 @@
+<nav>
+    <ul>
+        
+        <li><a href="/">Home</a></li>
+
+        <% if (!loggedIn) {%>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Sign Up</a></li>    
+         <%} %>   
+
+        <% if (loggedIn) {%>
+        <li><a href="/products">Products</a></li>
+        <li><button onclick="signOut()" >Sign Out</button></li>
+        <%} %>
+
+        
+    </ul>
+</nav>
+
+<script>
+    async function signOut() {
+        await fetch("http://localhost:3003/signout", {
+            method: "POST"
+        })
+        location.href="/";
+    }
+</script>

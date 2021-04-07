@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/header.ejs", {title: "register"})%>
+<body>
+    <%- include("./partials/nav.ejs")%>
+
+    <div>
+        <form action="/register" method="POST">
+             <label for="username">username</label></br>
+             <input type="text" name="bodyname" required placeholder="your name"> </br>
+             
+             <label for="email">email</label></br>
+             <input type="email" name="bodyemail" require placeholder="username@mail.com"></br>
+
+             <label for="password">password</label></br>
+             <input type="password" name="bodypass" required placeholder="******"></br>
+
+             <label for="repassword">confirm your password</label></br>
+             <input type="password" required placeholder="******">
+
+             <input type="submit" value="Register">
+        </form>   
+    </div>    
+</body>
+</html>
